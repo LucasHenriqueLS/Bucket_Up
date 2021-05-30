@@ -11,7 +11,8 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -129,6 +130,42 @@
                     <p class="texto_login">Experimente um mês de assinatura grátis no Bucket Up e garanta a segurança dos seus arquivos de forma fácil e rápida. O cadastro é simples e não exige cartão de crédito.</p>
                     <a class="botao_login" href="login.html"><button type="button" class="btn btn-info" id="btn_login_dir" href="login.html"><h><b>Acesse agora</b></h></button></a>
                 </div>
+
+                <div class="chat-bar-collapsible">
+                    <button id="chat-button" type="button" class="collapsible">Tire suas dúvidas!
+                        <i id="chat-icon" class="fa fa-fw fa-comments-o"></i>
+                    </button>
+                    <div class="content">
+                        <div class="full-chat-block">
+                            <!-- container da mensagem -->
+                            <div class="outer-container">
+                                <div class="chat-container">
+                                    <!-- mensagens -->
+                                    <div id="chatbox">
+                                        <h5 id="chat-timestamp"></h5>
+                                        <p id="botStarterMessage" class="botText"><span>Enviando...</span></p>
+                                    </div>
+                                    <!-- caixa de diálogo -->
+                                    <div class="chat-bar-input-block">
+                                        <div id="userInput">
+                                            <input id="textInput" class="input-box" type="text" name="msg"
+                                                placeholder="Aperte Enter para enviar">
+                                            <p></p>
+                                        </div>
+                                        <div class="chat-bar-icons">
+                                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                                onclick="sendButton()"></i>
+                                        </div>
+                                    </div>
+                                    <div id="chat-bar-bottom">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="row linha_div"></div>
@@ -221,4 +258,7 @@
     </footer>
     
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/responses.js"></script>
+<script src="js/chat.js"></script>
 </html>
